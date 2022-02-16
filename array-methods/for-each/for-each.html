@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="todo-app"></div>
+    <script >
+        
+        const todoList = [
+            { todo: 'Study JS', done: 'done' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' }
+        ];
+
+        const todoApp = document.querySelector('#todo-app');
+        const showTodo = () => {
+            return todoList.forEach(todoTask => {
+                todoApp.innerHTML += `<li>
+                    ${todoTask.todo}: ${todoTask.done}
+                </li>`;
+            });
+        }
+
+        showTodo();
+    </script>
+</body>
+</html>

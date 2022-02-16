@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="background-color: #191A1A; color: whitesmoke;">
+    <div id="todo-app"></div>
+    <script>
+        const todoList = [
+            { todo: 'Study JS', done: 'done' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' },
+            { todo: 'Workout', done: 'pending' }
+        ];
+
+        const todoApp = document.querySelector('#todo-app');
+        const newTodoList = todoList.map(todoTask => {
+            return `<li>${todoTask.todo} - ${todoTask.done}</li>`;
+        });
+        
+        todoApp.innerHTML = newTodoList.join('');
+    </script>
+</body>
+</html>
